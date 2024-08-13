@@ -58,5 +58,6 @@ sequelize.sync();
 
 module.exports ={
     User,
-    Category
+    Category,
+    Product
 }
