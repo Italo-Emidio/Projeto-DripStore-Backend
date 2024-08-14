@@ -4,6 +4,7 @@ const { Sequelize, DataTypes, QueryTypes } = require('sequelize');
 
 const sequelize = new Sequelize(uri);
 
+//modelo de usuário
 const User = sequelize.define(
     'User',
     {
@@ -30,7 +31,7 @@ const User = sequelize.define(
     },
 );
 
-
+//modelo de categoria
 const Category = sequelize.define(
     'Category',
     {
@@ -52,7 +53,7 @@ const Category = sequelize.define(
         timestamps: true
     },
 );
-
+//modelo de produto
 const Product = sequelize.define(
     'Product',
     {
@@ -93,7 +94,7 @@ const Product = sequelize.define(
 
     },
 );
-
+//modelo de opção de produto
 const ProdutoOpcao = sequelize.define('ProdutoOpcao', {
     id: {
         type: DataTypes.INTEGER,
@@ -129,6 +130,8 @@ const ProdutoOpcao = sequelize.define('ProdutoOpcao', {
         allowNull: false
     }
 });
+
+
 
 // Sincronizar o modelo com o banco de dados    
 sequelize.sync();
