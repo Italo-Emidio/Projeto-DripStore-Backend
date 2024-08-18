@@ -76,7 +76,7 @@ app.put("/v1/category/:id", (request, res) => {
       if (affectedRows === 0) {
         return res.status(404).send({ message: "Category not found" });
       }
-      return res.status(204).send(); // Atualização bem-sucedida, status 204
+      return res.status(204).send();
     })
     .catch((error) => {
       console.error("Error updating category:", error);

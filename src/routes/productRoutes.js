@@ -2,12 +2,6 @@ const app = require("./app-express.js");
 const { Product } = require("../models/models.js");
 const { Op } = require("sequelize");
 
-// GET / - Test route
-app.get("/", (req, res) => {
-  res.send("Olá, mundo");
-});
-
-// GET /v1/product/:id
 app.get("/v1/product/:id", (request, res) => {
   console.log("request.url", request.url); // debug
   console.log("request.params.id", request.params.id);
@@ -26,7 +20,6 @@ app.get("/v1/product/:id", (request, res) => {
     });
 });
 
-// GET /v1/product/
 app.get("/v1/product", (request, res) => {
   console.log("request.url", request.url); // debug
 
@@ -88,7 +81,6 @@ app.get("/v1/product", (request, res) => {
     });
 });
 
-// POST /v1/product
 app.post("/v1/product", (request, res) => {
   console.log("request.url", request.url); // debug
   console.log("request.body", request.body);
@@ -107,7 +99,6 @@ app.post("/v1/product", (request, res) => {
     });
 });
 
-// PUT /v1/product/:id
 app.put("/v1/product/:id", (request, res) => {
   console.log("request.url", request.url); // debug
   console.log("request.body", request.body);
